@@ -1,0 +1,13 @@
+<%- include('partials/navigation') %>
+<h1>List of Books</h1>
+<% if (books.length > 0) { %>
+<ul>
+  <% books.forEach(book => { %>
+  <li>
+    <%= book.title %> - <%= book.publishingYear %> by <%= book.authorId %>
+  </li>
+  <% }) %>
+</ul>
+<% } else { %>
+<p>No books has been found.</p>
+<% } %>
